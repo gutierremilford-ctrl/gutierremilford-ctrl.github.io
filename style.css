@@ -1,0 +1,495 @@
+/* ==========================================================================
+   1. GLOBAL STYLES (Applies to ALL HTML pages)
+   ========================================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Press Start 2P', cursive;
+    background:#000000;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* CRT EFFECT */
+.crt{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:9999;
+
+    background:
+    repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,.02),
+        rgba(255,255,255,.02) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+}
+
+/* HEADER / NAVIGATION */
+header{
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    background:#100805;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:#ffb347;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:white;
+}
+
+/* BUTTONS */
+button{
+    padding:12px 20px;
+    border:none;
+    cursor:pointer;
+}
+
+/* MUSIC BUTTON */
+#musicBtn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#ff7b00;
+    color:black;
+    z-index:999;
+}
+
+
+/* ==========================================================================
+   2. HOME PAGE ONLY STYLES (Used only on index.html / index.html)
+   ========================================================================== */
+
+/* HERO SECTION */
+.hero{
+    height:90vh;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #ff7b00,
+        #ff9f3f,
+        #ffd08a
+    );
+}
+
+/* SUN */
+.sun{
+    position:absolute;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    overflow:hidden;
+    left:50%;
+    top:80px;
+    transform:translateX(-50%);
+    background-image:url("../images/milfy.png");
+    background-size:cover;
+    background-position:center;
+}
+
+/* CLOUDS */
+.cloud{
+    position:absolute;
+    width:180px;
+    height:70px;
+    background:white;
+    opacity:.25;
+    border-radius:50px;
+}
+
+.cloud1{
+    top:120px;
+    animation:moveCloud 25s linear infinite;
+}
+
+.cloud2{
+    top:220px;
+    animation:moveCloud 40s linear infinite;
+}
+
+@keyframes moveCloud{
+    from{ left:-300px; }
+    to{ left:110%; }
+}
+
+/* INTRO BOX */
+.intro{
+    position:absolute;
+    left:60px;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,.55);
+    padding:30px;
+    max-width:450px;
+}
+
+.intro h2{
+    margin-bottom:20px;
+}
+
+.intro p{
+    line-height:2;
+    margin-bottom:20px;
+}
+
+/* ORIGINAL HOME PAGE KONOSUBA TEAM POSITION */
+.anime-corner{
+    position:absolute;
+    left:85%;
+    bottom:80px;
+    transform:translateX(-50%);
+    display:flex;
+    align-items:flex-end;
+    gap:10px;
+    z-index:10;
+}
+
+.anime-corner img,
+.anime-corner video{
+    height:110px;
+    width:auto;
+    object-fit:contain;
+
+    /* ADD THESE LINES TO GET THE BORDER ON YOUR HOME PAGE */
+    background-color: #1E293B;       /* Dark grey-blue block behind each character */
+    border: 2px solid #000000;       /* Retro black border around each sprite */
+    padding: 5px;                    /* Adds breathing room inside the box */
+    border-radius: 4px;              /* Slight roundness for a clean finish */
+    
+    filter: drop-shadow(3px 3px 0 rgba(0,0,0,.4)); /* Keeps your original pixel shadow */
+}
+
+/* GROUND */
+.ground{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:80px;
+    background:#1a0d08;
+    border-top:4px solid #ff7b00;
+}
+
+/* CARDS / NAVIGATION BOXES AT BOTTOM */
+.cards{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+    padding:40px;
+    background:#120907;
+}
+
+.card{
+    border:2px solid #ff7b00;
+    padding:30px;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow: 0 0 15px rgba(255,123,0,.6);
+}
+
+
+/* ==========================================================================
+   3. ABOUT ME STYLES (Only used on about.html)
+   ========================================================================== */
+
+body.about-page {
+    background: linear-gradient(to bottom, #10b5ff, #7cd2ff, #bde6ff);
+    min-height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+}
+
+.about-page .sun {
+    left: auto;
+    transform: none;
+    right: 50px;
+    top: 50px;
+}
+
+.about-sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.about-container {
+    position: relative;
+    z-index: 2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.about-box {
+    background: rgba(0, 0, 0, 0.65);
+    border: 4px solid #100805;
+    padding: 40px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.2);
+}
+
+.about-box h2 {
+    color: #ffb347;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.about-box p {
+    color: white;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 0.75rem;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ff7b00;
+    color: black;
+    text-decoration: none;
+    font-size: 0.7rem;
+    transition: 0.2s;
+}
+
+.back-btn:hover {
+    background: white;
+}
+.about-page .anime-corner {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    left: auto; 
+    transform: none; 
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 10;
+}
+.about-page .anime-corner img, 
+.about-page .anime-corner video {
+    height: 90px;   
+    width: auto;
+    object-fit: contain;
+    background-color: #1E293B;       
+    border: 2px solid #000000;       
+    padding: 5px;
+    border-radius: 4px;   
+    filter: none;   
+}
+
+
+/* ==========================================================================
+   4. SKILLS PAGE STYLES 
+   ========================================================================== */
+.skills-page {
+    background-color: #0F172A;
+    color: #FFFFFF;
+    font-family: 'Press Start 2P', cursive;
+    min-height: 100vh;
+    padding: 40px 20px 150px 20px;
+    box-sizing: border-box;
+    position: relative; 
+}
+
+.skills-page header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skills-page header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #FF9F1C;
+}
+
+.skills-page nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.skills-page nav a, .skills-page header > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    border: 2px solid #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.skills-page nav a:hover {
+    background-color: #FF9F1C;
+    color: #000000;
+}
+
+.skills-section {
+    max-width: 800px;
+    margin: 0 auto 120px auto;
+}
+
+.skills-section h2 {
+    font-size: 1.2rem;
+    color: #00e5ff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px dashed #00e5ff;
+    padding-bottom: 8px;
+}
+
+.skills-section ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.skills-section li {
+    background-color: #1E293B;
+    border: 2px solid #000000;
+    padding: 15px;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    box-shadow: 4px 4px 0px #000000;
+}
+
+/* THE FIX: Target .anime-corner ONLY when inside .skills-page 
+   This separates it completely from your Home Page style block!
+*/
+.skills-page .anime-corner {
+    position: absolute;   
+    bottom: 20px;  
+    right: 20px;   
+    left: auto;     /* Disables the home page left: 70% layout */
+    transform: none;/* Disables the home page centering shift */
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 10;
+}
+
+.skills-page .anime-corner img, 
+.skills-page .anime-corner video {
+    height: 90px;   /* Shrinks them down nicely for the corner card view */
+    width: auto;
+    object-fit: contain;
+    background-color: #1E293B;       
+    border: 2px solid #000000;       
+    padding: 5px;
+    border-radius: 4px;   
+    filter: none;   /* Removes the original home page drop shadow */
+}
+
+
+/* ==========================================================================
+   5. PROJECTS PAGE STYLES (Only used on project.html)
+   ========================================================================== */
+body.PROJECT-page {
+    background-color: #0F172A;
+    color: #FFFFFF;            
+    min-height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+}
+.PROJECT-page header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.PROJECT-page header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #FF9F1C;
+}
+.PROJECT-page nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.PROJECT-page nav a, .PROJECT-page header > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    border: 2px solid #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.PROJECT-page .anime-corner {
+    position: absolute;   
+    bottom: 20px;  
+    right: 20px;   
+    left: auto;     
+    transform: none; 
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 10;
+}
+.PROJECT-page .anime-corner img, 
+.PROJECT-page .anime-corner video {
+    height: 90px;   
+    width: auto;
+    object-fit: contain;
+    background-color: #1E293B;       
+    border: 2px solid #000000;       
+    padding: 5px;
+    border-radius: 4px;   
+    filter: none;   
+}
+
+
+/* 6. STARFIELD BACKGROUND EFFECT */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 3px;  
+    height: 3px; 
+    background: transparent;
+    box-shadow: 
+        10vw 20vh #fff,  25vw 12vh #fff,  45vw 35vh #fff,  60vw 15vh #fff,  85vw 25vh #fff,
+        5vw 65vh #fff,   30vw 75vh #fff,  50vw 85vh #fff,  75vw 60vh #fff,  90vw 80vh #fff,
+        15vw 45vh #ffeb3b, 35vw 22vh #ffeb3b, 65vw 48vh #ffeb3b, 80vw 70vh #ffeb3b,
+        8vw 88vh #ffeb3b,  55vw 5vh #ffeb3b,  95vw 40vh #ffeb3b,
+        18vw 8vh #00e5ff,  40vw 60vh #00e5ff, 70vw 28vh #00e5ff, 88vw 52vh #00e5ff,
+        52vw 50vh #00e5ff, 22vw 90vh #00e5ff, 63vw 82vh #00e5ff;
+    z-index: -1; 
+}

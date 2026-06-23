@@ -1,0 +1,92 @@
+/* ==========================================================================
+   4. CALCULATOR STYLES (Only used on calculator.html)
+   ========================================================================== */
+
+body.calc-page {
+    background: #120907; /* Dark background to match your theme */
+    min-height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.calc-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator-box {
+    background: #2a1a15; /* Brown container matching your scheme */
+    border: 4px solid #ff7b00; /* Vibrant orange border */
+    padding: 25px;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* The display screen */
+#display {
+    width: 100%;
+    height: 60px;
+    background: #111;
+    border: 3px solid #ff7b00;
+    color: #04f7e3; /* Neon cyan text for that retro glowing screen look */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* Button Grid layout */
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.calc-buttons button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    padding: 15px 5px;
+    background: #1a0d08;
+    border: 2px solid #ff9f3f;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.calc-buttons button:hover {
+    background: #ff7b00;
+    color: black;
+}
+
+/* Special Button Colors */
+.calc-buttons .btn-op {
+    color: #ffb347; /* Operators are light orange */
+}
+
+.calc-buttons .btn-clear {
+    background: #d94343; /* Clear button is red */
+    border-color: #ff6b6b;
+}
+
+.calc-buttons .btn-del {
+    background: #555;
+    border-color: #777;
+    font-size: 0.6rem; /* Make text fit */
+}
+
+.calc-buttons .btn-equal {
+    grid-row: span 2; /* Spans across two rows */
+    background: #04f7e3;
+    border-color: white;
+    color: black;
+}
+
+.calc-buttons .btn-zero {
+    grid-column: span 2; /* Double wide zero button */
+}

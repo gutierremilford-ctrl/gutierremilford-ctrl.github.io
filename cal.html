@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body class="calc-page">
+
+    <div class="calc-container">
+        <div class="calculator-box">
+            <input type="text" id="display" readonly placeholder="0">
+            
+            <div class="calc-buttons">
+                <button onclick="clearDisplay()" class="btn-clear">C</button>
+                <button onclick="appendValue('/')" class="btn-op">/</button>
+                <button onclick="appendValue('*')" class="btn-op">*</button>
+                <button onclick="deleteLast()" class="btn-del">DEL</button>
+
+                <button onclick="appendValue('7')">7</button>
+                <button onclick="appendValue('8')">8</button>
+                <button onclick="appendValue('9')">9</button>
+                <button onclick="appendValue('-')" class="btn-op">-</button>
+
+                <button onclick="appendValue('4')">4</button>
+                <button onclick="appendValue('5')">5</button>
+                <button onclick="appendValue('6')">6</button>
+                <button onclick="appendValue('+')" class="btn-op">+</button>
+
+                <button onclick="appendValue('1')">1</button>
+                <button onclick="appendValue('2')">2</button>
+                <button onclick="appendValue('3')">3</button>
+                <button onclick="calculateResult()" class="btn-equal">=</button>
+
+                <button onclick="appendValue('0')" class="btn-zero">0</button>
+                <button onclick="appendValue('.')">.</button>
+            </div>
+            
+            <a href="index.html" class="back-btn">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="CAL.js"></script>
+</body>
+</html>
