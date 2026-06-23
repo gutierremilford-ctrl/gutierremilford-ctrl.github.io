@@ -157,7 +157,7 @@ button{
 /* ORIGINAL HOME PAGE KONOSUBA TEAM POSITION */
 .anime-corner{
     position:absolute;
-    left:85%;
+    left:80%;
     bottom:80px;
     transform:translateX(-50%);
     display:flex;
