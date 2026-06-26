@@ -477,7 +477,7 @@ body.PROJECT-page {
 
 
 /* 6. STARFIELD BACKGROUND EFFECT */
-.stars {
+.PROJECT-page .stars {
     position: fixed;
     top: 0;
     left: 0;
@@ -492,4 +492,80 @@ body.PROJECT-page {
         18vw 8vh #00e5ff,  40vw 60vh #00e5ff, 70vw 28vh #00e5ff, 88vw 52vh #00e5ff,
         52vw 50vh #00e5ff, 22vw 90vh #00e5ff, 63vw 82vh #00e5ff;
     z-index: -1; 
+}
+
+/* 7. CONTACT PAGE STYLES (Only used on CONTACT.html)
+   ========================================================================== */    
+   .CONTACT-page {
+    background-color: hsl(116, 92%, 9%);
+    color: #FFFFFF;   rgb(0, 255, 187)  
+    min-height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+    padding: 40px 20px 150px 20px;
+   }
+   .CONTACT-page header {
+    text-align: center;
+    margin-bottom: 40px;
+   }
+   .CONTACT-page header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #FF9F1C;
+   }
+   .CONTACT-page nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+   }
+   .CONTACT-page nav a, .CONTACT-page header > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    border: 2px solid #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.4);
+   }
+  .CONTACT-page .anime-corner {
+    position: fixed;      /* Changed from absolute to fixed so it stays exactly where you want it */
+    bottom: 40px;         /* ADJUST THIS to move it up or down */
+    right: 40px;          /* ADJUST THIS to move it left or right */
+    left: auto;     
+    transform: none; 
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 100;         /* Higher z-index to make sure it isn't hidden behind form panels */
+}
+
+.CONTACT-page .anime-corner img,
+.CONTACT-page .anime-corner video {
+    height: 140px;        /* ADJUST THIS value to scale your pixel art characters cleanly */
+    width: auto;
+    object-fit: contain;
+    background-color: #1E293B; 
+    border: 2px solid #000000; 
+    padding: 5px; 
+    border-radius: 4px; 
+    image-rendering: pixelated; /* Keeps your Konosuba sprites nice and crisp when resizing! */
+    filter: drop-shadow(3px 3px 0 rgba(0,0,0,.4)); 
+}
+   .CONTACT-page .Stars {
+    position: fixed;
+    top: 0;   
+    left: 0;  
+    width: 3px;  
+    height: 3px; 
+    background: gold; /* This sets the very first star to gold */
+    box-shadow: 
+        /* We changed all the #fff and #00e5ff codes below to gold */
+        10vw 20vh gold,  25vw 12vh gold,  45vw 35vh gold,  60vw 15vh gold,  85vw 25vh gold,
+        5vw 65vh gold,   30vw 75vh gold,  50vw 85vh gold,  75vw 60vh gold,  90vw 80vh gold,
+        15vw 45vh #ffeb3b, 35vw 22vh #ffeb3b, 65vw 48vh #ffeb3b, 80vw 70vh #ffeb3b,
+        8vw 88vh #ffeb3b,  55vw 5vh #ffeb3b,  95vw 40vh #ffeb3b,
+        18vw 8vh gold,   40vw 60vh gold,   70vw 28vh gold,   88vw 52vh gold,
+        52vw 50vh gold,   22vw 90vh gold,   63vw 82vh gold;
+    z-index: 1; 
 }
