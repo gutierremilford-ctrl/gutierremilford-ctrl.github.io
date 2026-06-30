@@ -496,14 +496,14 @@ body.PROJECT-page {
 
 /* 7. CONTACT PAGE STYLES (Only used on CONTACT.html)
    ========================================================================== */    
-   .CONTACT-page {
+  .CONTACT-page {
     background-color: hsl(116, 92%, 9%);
-    color: #FFFFFF;   rgb(0, 255, 187)  
+    color: rgb(0, 255, 187);
     min-height: 100vh;
     font-family: 'Press Start 2P', cursive;
     position: relative;
     padding: 40px 20px 150px 20px;
-   }
+}
    .CONTACT-page header {
     text-align: center;
     margin-bottom: 40px;
