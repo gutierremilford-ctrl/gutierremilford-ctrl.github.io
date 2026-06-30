@@ -83,7 +83,7 @@ public class p {
 
         ////// SECTION BOX //////
         String opins[] = { "section 1A", "section 1B", "section 2A", "section 2B" };
-        JComboBox combo = new JComboBox(opins);
+        JComboBox<String> combo = new JComboBox<>(opins);
         combo.setBounds(90, 110, 150, 30);
         combo.setSelectedIndex(-1);
         Panel1.add(combo);
@@ -112,7 +112,7 @@ public class p {
 
         //// STRANDS COMBO BOX ////
         String opin[] = { "ABM", "STEM", "ICT", "HUMS", "HU" };
-        JComboBox combe = new JComboBox(opin);
+        JComboBox<String> combe = new JComboBox<>(opin);
         combe.setBounds(110, 30, 100, 30);
         combe.setSelectedIndex(-1);
         Panel2.add(combe);
