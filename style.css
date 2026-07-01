@@ -34,11 +34,12 @@ body{
 
 /* HEADER / NAVIGATION */
 header{
-    height:80px;
+    height:auto;
+    min-height:80px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:0 40px;
+    padding:15px 40px;
     background:#100805;
 }
 
@@ -76,7 +77,7 @@ button{
 
 
 /* ==========================================================================
-   2. HOME PAGE ONLY STYLES (Used only on index.html / index.html)
+   2. HOME PAGE ONLY STYLES (Used only on index.html)
    ========================================================================== */
 
 /* HERO SECTION */
@@ -143,6 +144,7 @@ button{
     background:rgba(0,0,0,.55);
     padding:30px;
     max-width:450px;
+    width: calc(100% - 120px);
 }
 
 .intro h2{
@@ -171,14 +173,11 @@ button{
     height:110px;
     width:auto;
     object-fit:contain;
-
-    /* ADD THESE LINES TO GET THE BORDER ON YOUR HOME PAGE */
-    background-color: #1E293B;       /* Dark grey-blue block behind each character */
-    border: 2px solid #000000;       /* Retro black border around each sprite */
-    padding: 5px;                    /* Adds breathing room inside the box */
-    border-radius: 4px;              /* Slight roundness for a clean finish */
-    
-    filter: drop-shadow(3px 3px 0 rgba(0,0,0,.4)); /* Keeps your original pixel shadow */
+    background-color: #1E293B;       
+    border: 2px solid #000000;       
+    padding: 5px;                    
+    border-radius: 4px;              
+    filter: drop-shadow(3px 3px 0 rgba(0,0,0,.4)); 
 }
 
 /* GROUND */
@@ -195,7 +194,7 @@ button{
 /* CARDS / NAVIGATION BOXES AT BOTTOM */
 .cards{
     display:grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap:20px;
     padding:40px;
     background:#120907;
@@ -391,15 +390,12 @@ body.about-page {
     box-shadow: 4px 4px 0px #000000;
 }
 
-/* THE FIX: Target .anime-corner ONLY when inside .skills-page 
-   This separates it completely from your Home Page style block!
-*/
 .skills-page .anime-corner {
     position: absolute;   
     bottom: 20px;  
     right: 20px;   
-    left: auto;     /* Disables the home page left: 70% layout */
-    transform: none;/* Disables the home page centering shift */
+    left: auto;    
+    transform: none;
     display: flex;
     align-items: flex-end;
     gap: 10px;
@@ -408,14 +404,14 @@ body.about-page {
 
 .skills-page .anime-corner img, 
 .skills-page .anime-corner video {
-    height: 90px;   /* Shrinks them down nicely for the corner card view */
+    height: 90px;   
     width: auto;
     object-fit: contain;
     background-color: #1E293B;       
     border: 2px solid #000000;       
     padding: 5px;
     border-radius: 4px;   
-    filter: none;   /* Removes the original home page drop shadow */
+    filter: none;   
 }
 
 
@@ -497,7 +493,7 @@ body.PROJECT-page {
 
 /* 7. CONTACT PAGE STYLES (Only used on CONTACT.html)
    ========================================================================== */    
-  .CONTACT-page {
+.CONTACT-page {
     background-color: hsl(116, 92%, 9%);
     color: rgb(0, 255, 187);
     min-height: 100vh;
@@ -505,63 +501,62 @@ body.PROJECT-page {
     position: relative;
     padding: 40px 20px 150px 20px;
 }
-   .CONTACT-page header {
+.CONTACT-page header {
     text-align: center;
     margin-bottom: 40px;
-   }
-   .CONTACT-page header h1 {
+}
+.CONTACT-page header h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #FF9F1C;
-   }
-   .CONTACT-page nav {
+}
+.CONTACT-page nav {
     display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
     margin-top: 20px;
-   }
-   .CONTACT-page nav a, .CONTACT-page header > a {
+}
+.CONTACT-page nav a, .CONTACT-page header > a {
     color: #FFFFFF;
     text-decoration: none;
     font-size: 0.8rem;
     padding: 8px 12px;
     border: 2px solid #FFFFFF;
     background-color: rgba(0, 0, 0, 0.4);
-   }
-  .CONTACT-page .anime-corner {
-    position: fixed;      /* Changed from absolute to fixed so it stays exactly where you want it */
-    bottom: 40px;         /* ADJUST THIS to move it up or down */
-    right: 40px;          /* ADJUST THIS to move it left or right */
+}
+.CONTACT-page .anime-corner {
+    position: fixed;      
+    bottom: 40px;         
+    right: 40px;          
     left: auto;     
     transform: none; 
     display: flex;
     align-items: flex-end;
     gap: 10px;
-    z-index: 100;         /* Higher z-index to make sure it isn't hidden behind form panels */
+    z-index: 100;         
 }
 
 .CONTACT-page .anime-corner img,
 .CONTACT-page .anime-corner video {
-    height: 140px;        /* ADJUST THIS value to scale your pixel art characters cleanly */
+    height: 140px;        
     width: auto;
     object-fit: contain;
     background-color: #1E293B; 
     border: 2px solid #000000; 
     padding: 5px; 
     border-radius: 4px; 
-    image-rendering: pixelated; /* Keeps your Konosuba sprites nice and crisp when resizing! */
+    image-rendering: pixelated; 
     filter: drop-shadow(3px 3px 0 rgba(0,0,0,.4)); 
 }
-   .CONTACT-page .Stars {
+.CONTACT-page .Stars {
     position: fixed;
     top: 0;   
     left: 0;  
     width: 3px;  
     height: 3px; 
-    background: gold; /* This sets the very first star to gold */
+    background: gold; 
     box-shadow: 
-        /* We changed all the #fff and #00e5ff codes below to gold */
         10vw 20vh gold,  25vw 12vh gold,  45vw 35vh gold,  60vw 15vh gold,  85vw 25vh gold,
         5vw 65vh gold,   30vw 75vh gold,  50vw 85vh gold,  75vw 60vh gold,  90vw 80vh gold,
         15vw 45vh #ffeb3b, 35vw 22vh #ffeb3b, 65vw 48vh #ffeb3b, 80vw 70vh #ffeb3b,
@@ -569,4 +564,110 @@ body.PROJECT-page {
         18vw 8vh gold,   40vw 60vh gold,   70vw 28vh gold,   88vw 52vh gold,
         52vw 50vh gold,   22vw 90vh gold,   63vw 82vh gold;
     z-index: 1; 
+}
+
+
+/* ==========================================================================
+   8. GLOBAL MOBILE RESPONSIVENESS OVERRIDES (Screens smaller than 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Fix Headers & Navigation */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    /* Font adjustments for retro pixel font blowouts */
+    .skills-page header h1, 
+    .PROJECT-page header h1, 
+    .CONTACT-page header h1 {
+        font-size: 1.2rem;
+    }
+
+    /* 2. Fix Home Page Hero & Layout */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 40px;
+    }
+    .sun {
+        width: 150px;
+        height: 150px;
+        top: 20px;
+    }
+    .intro {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        margin: 200px auto 40px auto; /* Centers the text box below the sun */
+        width: 90%;
+        max-width: none;
+    }
+    .intro h2 {
+        font-size: 1rem;
+    }
+    .intro p {
+        font-size: 0.7rem;
+    }
+
+    /* 3. Stack Navigation Cards Vertically */
+    .cards {
+        grid-template-columns: 1fr; /* 4 columns becomes 1 clean column stack */
+        padding: 20px;
+    }
+    .card {
+        padding: 20px;
+        font-size: 0.8rem;
+    }
+
+    /* 4. Downsize About Box */
+    .about-box {
+        padding: 20px;
+    }
+    .about-box h2 {
+        font-size: 1rem;
+    }
+    .about-page .sun {
+        width: 100px;
+        height: 100px;
+        top: 10px;
+        right: 10px;
+    }
+
+    /* 5. Handle character sprites overlaying on content */
+    .anime-corner, 
+    .skills-page .anime-corner, 
+    .PROJECT-page .anime-corner, 
+    .CONTACT-page .anime-corner {
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        transform: none !important;
+        justify-content: center;
+        margin: 40px auto 20px auto;
+        width: 100%;
+    }
+    
+    .anime-corner img, .anime-corner video,
+    .skills-page .anime-corner img, .skills-page .anime-corner video,
+    .PROJECT-page .anime-corner img, .PROJECT-page .anime-corner video {
+        height: 70px !important; /* Scale Konosuba sprites down so they fit mobile screen width */
+    }
+
+    .CONTACT-page .anime-corner img, 
+    .CONTACT-page .anime-corner video {
+        height: 90px !important;
+    }
 }
